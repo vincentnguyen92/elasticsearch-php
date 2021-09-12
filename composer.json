@@ -1,20 +1,36 @@
 {
     "name": "okxe/elasticsearch",
     "description": "PHP Client for Elasticsearch",
-    "keywords": ["search","client", "elasticsearch"],
-    "type": "library",
-    "autoload": {
-        "psr-4": {
-            "Okxe\\Elasticsearch\\": "src/"
-        }
-    },
+    "keywords": ["search", "client", "elasticsearch"],
+    "type": "package",
+    "license": "MIT",
     "authors": [
         {
             "name": "Vincent Nguyen",
             "email": "mr.vannguyen92@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Okxe\\Elasticsearch\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Okxe\\Elasticsearch\\Tests\\": "tests/"
+        }
+    },
     "require": {
-        "elasticsearch/elasticsearch": "^7.12"
+        "elasticsearch/elasticsearch": "^7.14"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Okxe\\Elasticsearch\\ElasticsearchServiceProvider"
+            ],
+            "aliases": {
+                "Elasticsearch": "Okxe\\Elasticsearch\\Facades\\Elasticsearch"
+            }
+        }
     }
 }
