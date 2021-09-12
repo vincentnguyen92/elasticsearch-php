@@ -1,0 +1,20 @@
+{
+    "name": "okxe/elasticsearch",
+    "description": "PHP Client for Elasticsearch",
+    "keywords": ["search","client", "elasticsearch"],
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Okxe\\Elasticsearch\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vincent Nguyen",
+            "email": "mr.vannguyen92@gmail.com"
+        }
+    ],
+    "require": {
+        "elasticsearch/elasticsearch": "^7.12"
+    }
+}
